@@ -14,12 +14,28 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<?php include 'vistas/nav.php'; ?>
+
+    <!-- Barra de Navegación Superior con título destacado y botón de inicio de sesión -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom shadow-sm">
+        <div class="container-fluid d-flex justify-content-center position-relative">
+            <!-- Título de la página centralizado, sin mx-auto aquí ya que el padre lo centrará -->
+            <a class="navbar-brand text-white fw-bold display-5 animated-title" href="#">
+                APRENDIENDO SIN LÁPIZ NI PAPEL
+            </a>
+            <!-- Botón para iniciar sesión posicionado absolutamente en la esquina superior derecha -->
+            <div class="position-absolute end-0 top-50 translate-middle-y me-3">
+                <button class="btn btn-warning text-dark fw-bold rounded-pill px-4 py-2" id="iniciarSesionBtn">
+                    <i class="fas fa-user-circle me-2"></i> Iniciar Sesión
+                </button>
+            </div>
+        </div>
+    </nav>
+
     <!-- Contenido Principal de la página -->
     <div class="container mt-5">
         <!-- Título del colegio -->
         <h2 class="text-center text-info-custom mb-5 school-title">
-            Creado por "Colegio Carlos Condell de La Haza, La Serena4"
+            Creado por "Colegio Carlos Condell de La Haza, La Serena"
         </h2>
 
         <!-- Sección de módulos de grado -->

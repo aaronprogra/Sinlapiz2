@@ -101,6 +101,28 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show the login modal.
         loginModal.show();
     });
+// --- NEW LOGIC FOR LOGIN FORM SUBMISSION ---
+    const loginForm = document.querySelector('#loginModal form');
+    if (loginForm) {
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent the form from submitting and reloading the page.
 
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple example authentication (for demonstration purposes only).
+            // In a real application, this would involve sending credentials to a server.
+            if (username === 'profesor' && password === '1234') {
+                alert('Inicio de sesión exitoso. Redirigiendo al panel del profesor...');
+                loginModal.hide(); // Hide the modal.
+                window.location.href = 'vistas/panelProfe.php'; // Redirect to the teacher dashboard.
+            } else {
+                alert('Usuario o contraseña incorrectos.');
+            }
+        });
+    } else {
+        console.error('Login form not found in the DOM.');
+    }
+    // --- END NEW LOGIC ---
     // Additional global functionalities can be added here if needed.
 });
