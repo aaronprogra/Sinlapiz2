@@ -19,7 +19,7 @@
     <div class="container mt-5">
         <!-- Título del colegio -->
         <h2 class="text-center text-info-custom mb-5 school-title">
-            Creado por "Colegio Carlos Condell de La Haza, La Serena3"
+            Creado por "Colegio Carlos Condell de La Haza, La Serena4"
         </h2>
 
         <!-- Sección de módulos de grado -->
