@@ -1,0 +1,287 @@
+/* Colores vibrantes y atractivos para niños */
+:root {
+    --primary-color: #007b40; /* Verde Oscuro para el navbar */
+    --secondary-color: #FFD700; /* Oro */
+    --success-color: #32CD32; /* Verde Lima */
+    --danger-color: #FF4500; /* Naranja Rojo */
+    --info-color: #1E90FF; /* Azul Dodger */
+    --warning-color: #FFD700; /* Oro para botones */
+    --school-text-color: #007b40; /* Verde Oscuro para el texto del colegio */
+    --background-light: #F0F8FF; /* Azul Alice para el fondo */
+    --text-dark: #333333; /* Gris oscuro para texto general */
+}
+
+body {
+    background-color: var(--background-light);
+    font-family: 'Inter', sans-serif; /* Fuente Inter, más moderna y legible */
+    color: var(--text-dark);
+}
+
+/* Clases personalizadas de Bootstrap para los colores */
+.bg-primary-custom { background-color: var(--primary-color) !important; }
+.bg-success-custom { background-color: var(--success-color) !important; }
+.bg-danger-custom { background-color: var(--danger-color) !important; }
+.bg-info-custom { background-color: var(--info-color) !important; }
+.bg-warning-custom { background-color: var(--warning-color) !important; }
+.text-info-custom { color: var(--school-text-color) !important; }
+
+/* Estilos para el botón primario personalizado (ej: botón Entrar en el modal de login) */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+.btn-primary-custom:hover {
+    background-color: #006a35; /* Un poco más oscuro */
+    border-color: #006a35;
+}
+
+/* Estilos para el botón de matemáticas (azul) */
+.btn-info-custom {
+    background-color: var(--info-color); /* Utiliza el color azul definido en :root */
+    border-color: var(--info-color);
+    color: white;
+}
+.btn-info-custom:hover {
+    background-color: #1A7DD9; /* Un tono más oscuro de azul al pasar el mouse */
+    border-color: #1A7DD9;
+}
+
+/* Estilos para el botón de lenguaje (rojo) */
+.btn-danger-custom {
+    background-color: var(--danger-color); /* Utiliza el color rojo definido en :root */
+    border-color: var(--danger-color);
+    color: white;
+}
+.btn-danger-custom:hover {
+    background-color: #D93B00; /* Un tono más oscuro de rojo al pasar el mouse */
+    border-color: #D93B00;
+}
+
+/* Estilos para el botón secundario personalizado (ej: botón Cerrar en los modales) */
+.btn-secondary-custom {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+.btn-secondary-custom:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+/* Estilos para el título principal "Aprendiendo sin Lápiz ni Papel" */
+.animated-title {
+    font-family: 'Lobster', cursive; /* Fuente Lobster */
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    animation: fadeInScale 1.5s ease-out; /* Animación de aparición y escala */
+    transform: translateX(20px); /* Desplaza 20px a la derecha desde su posición centrada */
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    display: block; /* Asegura que la transformación se aplique correctamente */
+}
+
+/* Animación para el título */
+@keyframes fadeInScale {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Estilos para el título del colegio */
+.school-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los módulos de grado */
+.module-card {
+    border-radius: 20px; /* Bordes más redondeados */
+    min-height: 280px; /* Altura mínima para que sean uniformes */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición para hover */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Asegura que el contenido no se salga */
+}
+
+.module-card:hover {
+    transform: translateY(-12px) scale(1.03); /* Efecto de elevación y ligera ampliación */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* Sombra más pronunciada y suave */
+}
+
+.module-card h3 {
+    font-size: 2.2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+}
+
+.module-card p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Estilos para iconos dentro de las tarjetas */
+.module-card .fas {
+    font-size: 4rem; /* Iconos más grandes */
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 15px;
+}
+
+/* Estilos para el botón de iniciar sesión */
+#iniciarSesionBtn {
+    font-size: 1.1rem;
+    padding: 10px 25px;
+    border-radius: 30px; /* Bordes más redondeados */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#iniciarSesionBtn:hover {
+    background-color: #FFC107; /* Tono de advertencia un poco más claro */
+    transform: translateY(-2px);
+}
+
+/* Estilos para los modales */
+.modal-content {
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1.5rem;
+}
+
+.modal-title {
+    font-size: 2rem;
+}
+
+.modal-body .lead {
+    color: var(--text-dark);
+}
+
+/* Estilo para los botones interactivos dentro del modal */
+.interactive-button {
+    font-size: 1.5rem;
+    padding: 15px 40px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 30px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.interactive-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos comunes para las páginas de juegos (Matemáticas y Lenguaje) */
+.game-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.game-card img {
+    width: 100%;
+    height: 180px; /* Altura fija para las imágenes de juego */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-bottom: 2px solid var(--primary-color);
+}
+.game-card .card-body {
+    padding: 1rem;
+}
+.game-card .card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+.game-card a {
+    text-decoration: none; /* Quitar subrayado del enlace */
+    color: inherit; /* Heredar color del padre */
+    display: block; /* Para que toda la tarjeta sea clickable */
+}
+.game-card a:hover .card-title {
+    color: var(--info-color); /* Cambiar color al pasar el mouse */
+}
+.back-button {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .animated-title {
+        font-size: 2.5rem;
+        transform: translateX(0); /* Quitar desplazamiento para pantallas pequeñas */
+        margin-left: auto !important; /* Vuelve al centrado automático */
+        margin-right: auto !important;
+    }
+    .school-title {
+        font-size: 1.4rem;
+    }
+    .module-card {
+        min-height: 220px;
+    }
+    .module-card h3 {
+        font-size: 1.8rem;
+    }
+    .module-card .fas {
+        font-size: 3rem;
+    }
+    #iniciarSesionBtn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+        position: static !important; /* Quitar posicionamiento absoluto en móviles */
+        transform: none !important;
+        margin-top: 10px; /* Espacio si se va a la siguiente línea */
+    }
+    .modal-title {
+        font-size: 1.5rem;
+    }
+    .interactive-button {
+        font-size: 1.2rem;
+        padding: 10px 25px;
+    }
+    .container-fluid.d-flex {
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+        justify-content: center; /* Centrar todo el contenido */
+    }
+    .navbar-brand {
+        text-align: center;
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .animated-title {
+        font-size: 2rem;
+    }
+    .navbar-brand {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    #iniciarSesionBtn {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .module-card {
+        min-height: 180px;
+    }
+    .module-card h3 {
+        font-size: 1.5rem;
+    }
+    .module-card .fas {
+        font-size: 2.5rem;
+    }
+}
