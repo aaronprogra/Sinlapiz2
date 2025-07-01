@@ -14,7 +14,23 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-<?php include 'nav.php'; ?>
+
+<!-- Barra de Navegación Superior con título destacado y botón de inicio de sesión -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom shadow-sm">
+        <div class="container-fluid d-flex justify-content-center position-relative">
+            <!-- Título de la página centralizado, sin mx-auto aquí ya que el padre lo centrará -->
+            <a class="navbar-brand text-white fw-bold display-5 animated-title" href="#">
+                APRENDIENDO SIN LÁPIZ NI PAPEL
+            </a>
+            <!-- Botón para iniciar sesión posicionado absolutamente en la esquina superior derecha -->
+            <div class="position-absolute end-0 top-50 translate-middle-y me-3">
+                <button class="btn btn-warning text-dark fw-bold rounded-pill px-4 py-2" id="iniciarSesionBtn">
+                    <i class="fas fa-user-circle me-2"></i> Iniciar Sesión
+                </button>
+            </div>
+        </div>
+    </nav>
+    
     <!-- Contenido Principal de la página de Matemáticas Primero Básico -->
     <div class="container mt-5">
         <h2 class="text-center text-info-custom mb-5 school-title">
@@ -86,6 +102,34 @@
         </div>
     </div>
 
-    <?php include 'modalSesion.php' ?>
+  <!-- Modal para el inicio de sesión -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow-lg">
+                <div class="modal-header bg-warning-custom text-dark rounded-top-4">
+                    <h5 class="modal-title fw-bold" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label fw-bold text-dark">Usuario:</label>
+                            <input type="text" class="form-control rounded-pill px-3 py-2" id="username" placeholder="Ingresa tu usuario">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label fw-bold text-dark">Contraseña:</label>
+                            <input type="password" class="form-control rounded-pill px-3 py-2" id="password" placeholder="Ingresa tu contraseña">
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100 rounded-pill py-2 fw-bold interactive-button">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace a Bootstrap JavaScript (Bundle con Popper) para funcionalidades interactivas -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Enlace a JavaScript personalizado para el comportamiento de la página -->
+    <script src="../js/script.js"></script>
 </body>
 </html>
