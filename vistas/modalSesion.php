@@ -1,5 +1,5 @@
- <!-- Modales de Iniciar Sesión (se mantiene el mismo modal de index.html) -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+ <!-- Modal para el inicio de sesión -->
+ <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-4 border-0 shadow-lg">
                 <div class="modal-header bg-warning-custom text-dark rounded-top-4">
@@ -23,20 +23,7 @@
         </div>
     </div>
 
-    <!-- Enlace a Bootstrap JavaScript (Bundle con Popper) -->
+    <!-- Enlace a Bootstrap JavaScript (Bundle con Popper) para funcionalidades interactivas -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Incluir script.js si manejas el modal de login globalmente, o un script específico -->
-    <script src="js/script.js"></script>
-    <script>
-        // Script específico para manejar el botón de iniciar sesión en esta página
-        document.addEventListener('DOMContentLoaded', () => {
-            const iniciarSesionBtn = document.getElementById('iniciarSesionBtn');
-            const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
-
-            if (iniciarSesionBtn) {
-                iniciarSesionBtn.addEventListener('click', () => {
-                    loginModal.show();
-                });
-            }
-        });
-    </script>
+    <!-- Enlace a JavaScript personalizado para el comportamiento de la página -->
+    <script src="../js/script.js"></script>
