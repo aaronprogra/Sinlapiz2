@@ -63,54 +63,76 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ----- Lógica para agregar un juego al hacer clic en el botón -----
-    addGameForm.addEventListener('submit', (event) => {
-        event.preventDefault(); // Evitar que el formulario se envíe (y recargue la página)
+    
+// ----- Enviar datos al servidor al agregar juego -----
+addGameForm.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-        const title = gameTitleInput.value.trim();
-        const url = gameUrlInput.value.trim();
-        const grade = gameGradeSelect.value;   // Nuevo: Obtener el curso seleccionado
-        const subject = gameSubjectSelect.value; // Nuevo: Obtener la materia seleccionada
-        const imageUrl = uploadedImageUrl; // Usar la URL base64 de la imagen cargada
+    const title = gameTitleInput.value.trim();
+    const url = gameUrlInput.value.trim();
+    const grade = gameGradeSelect.value;
+    const subject = gameSubjectSelect.value;
+    const imageUrl = uploadedImageUrl;
 
-        // Validar que todos los campos requeridos estén llenos
-        if (title && url && grade && subject && imageUrl) {
-            // Eliminar el mensaje "No hay juegos agregados aún" si existe
-            if (noGamesMessage) {
-                const existingNoGamesMessage = document.getElementById('noGamesMessage');
-                if (existingNoGamesMessage) {
-                    existingNoGamesMessage.remove();
-                }
+    if (title && url && grade && subject && imageUrl) {
+        fetch('../controladores/controlJuego.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                titulo: title,
+                url: url,
+                curso: grade,
+                materia: subject,
+                imagen: imageUrl
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                cargarJuegos(); // Refresca la lista
+                addGameForm.reset();
+                imagePreview.src = '#';
+                imagePreview.classList.add('d-none');
+                uploadedImageUrl = '';
+            } else {
+                alert("Error al guardar el juego.");
             }
+        });
+    } else {
+        alert('Completa todos los campos.');
+    }
+});
 
-            // Crear la tarjeta de juego dinámicamente
-            // Añadimos el curso y la materia a la descripción para visualización
-            const gameCardHtml = `
-                <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
-                    <div class="card game-card flex-fill">
-                        <a href="${url}" target="_blank" rel="noopener noreferrer">
-                            <img src="${imageUrl}" class="card-img-top" alt="Imagen de ${title}">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">${title}</h5>
-                                <p class="card-text text-muted">${grade.charAt(0).toUpperCase() + grade.slice(1)} Básico - ${subject.charAt(0).toUpperCase() + subject.slice(1)}</p>
+// ----- Función para cargar juegos desde el servidor -----
+function cargarJuegos() {
+    fetch('../controladores/controlJuego.php')
+        .then(res => res.json())
+        .then(juegos => {
+            gamesList.innerHTML = ''; // Vaciar la lista actual
+            if (juegos.length === 0) {
+                gamesList.innerHTML = '<p id="noGamesMessage" class="text-center text-muted">No hay juegos agregados aún.</p>';
+            } else {
+                juegos.forEach(juego => {
+                    const cardHtml = `
+                        <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
+                            <div class="card game-card flex-fill">
+                                <a href="${juego.url}" target="_blank" rel="noopener noreferrer">
+                                    <img src="${juego.imagen}" class="card-img-top" alt="Imagen de ${juego.titulo}">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">${juego.titulo}</h5>
+                                        <p class="card-text text-muted">${juego.curso.charAt(0).toUpperCase() + juego.curso.slice(1)} Básico - ${juego.materia.charAt(0).toUpperCase() + juego.materia.slice(1)}</p>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </div>
-            `;
-            // Insertar la nueva tarjeta al inicio de la lista de juegos
-            gamesList.insertAdjacentHTML('afterbegin', gameCardHtml);
+                        </div>`;
+                    gamesList.insertAdjacentHTML('beforeend', cardHtml);
+                });
+            }
+        });
+}
 
-            // Limpiar el formulario después de agregar el juego
-            addGameForm.reset();
-            imagePreview.src = '#';
-            imagePreview.classList.add('d-none');
-            uploadedImageUrl = ''; // Resetear la URL de la imagen
-        } else {
-            // Mostrar un mensaje de error si faltan campos
-            alert('Por favor, completa todos los campos (Título, URL, Curso, Materia e Imagen).');
-        }
-    });
-
+// Ejecutar al cargar
+cargarJuegos();
     // ----- Lógica para el botón de Iniciar Sesión / Cerrar Sesión -----
     const loginLogoutBtn = document.getElementById('loginLogoutBtn');
     const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));

@@ -1,5 +1,5 @@
  <!-- Modal para el inicio de sesión -->
- <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-4 border-0 shadow-lg">
                 <div class="modal-header bg-warning-custom text-dark rounded-top-4">
@@ -22,8 +22,8 @@
             </div>
         </div>
     </div>
-
-    <!-- Enlace a Bootstrap JavaScript (Bundle con Popper) para funcionalidades interactivas -->
+<!-- Enlace a Bootstrap JavaScript (Bundle con Popper) para funcionalidades interactivas -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Enlace a JavaScript personalizado para el comportamiento de la página -->
-    <script src="../js/script.js"></script>
+    <script src="../js/login_script.js"></script>
+   

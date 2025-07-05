@@ -1,5 +1,5 @@
- <!-- Barra de Navegación Superior con título destacado y botón de inicio de sesión -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom shadow-sm">
+<!-- Barra de Navegación Superior con título destacado y botón de inicio de sesión -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom shadow-sm">
         <div class="container-fluid d-flex justify-content-center position-relative">
             <!-- Título de la página centralizado, sin mx-auto aquí ya que el padre lo centrará -->
             <a class="navbar-brand text-white fw-bold display-5 animated-title" href="#">

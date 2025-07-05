@@ -95,13 +95,7 @@
             <p class="text-center text-muted" id="noGamesMessage">No hay juegos agregados aún. ¡Usa el formulario de arriba!</p>
         </div>
 
-        <!-- Botón para Volver al Inicio -->
-        <div class="text-center back-button">
-            <a href="index.html" class="btn btn-primary-custom btn-lg rounded-pill px-5 py-3 interactive-button">
-                <i class="fas fa-arrow-left me-2"></i> Volver al Inicio
-            </a>
-        </div>
-    </div>
+   <?php include 'back.php' ?>
 
     <!-- Modales de Iniciar Sesión (se mantiene el mismo modal de index.html) -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
