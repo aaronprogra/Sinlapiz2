@@ -19,5 +19,18 @@ class JuegoModel {
         $result = $this->conexion->query("SELECT * FROM juegos ORDER BY id DESC");
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+    public function obtener1M(){
+        $result = $this->conexion->query("SELECT * FROM juegos WHERE curso='primero' AND materia='matematicas' ORDER BY id DESC");
+        return $result->fetch_all(MYSQLI_ASSOC);
+        
+    }
+     public function obtener2M(){
+        $result = $this->conexion->query("SELECT * FROM juegos WHERE curso='segundo' AND materia='matematicas' ORDER BY id DESC");
+        return $result->fetch_all(MYSQLI_ASSOC);
+        
+    }
+       
+        
 }
+
 ?>

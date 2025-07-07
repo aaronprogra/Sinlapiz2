@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: application/json');
 require_once '../modelos/modelosJuego.php';
 
 $metodo = $_SERVER['REQUEST_METHOD'];

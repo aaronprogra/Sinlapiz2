@@ -35,6 +35,7 @@
 
 
         </div>
+        <script src="../js/juegos_script.js"></script>
         <?php include 'modalSesion.php';  ?>
 <?php include 'back.php' ?>
 

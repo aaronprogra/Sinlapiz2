@@ -132,7 +132,7 @@ function cargarJuegos() {
 }
 
 // Ejecutar al cargar
-cargarJuegos();
+//cargarJuegos();
     // ----- Lógica para el botón de Iniciar Sesión / Cerrar Sesión -----
     const loginLogoutBtn = document.getElementById('loginLogoutBtn');
     const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));

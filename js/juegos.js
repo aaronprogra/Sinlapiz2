@@ -20,16 +20,11 @@ function cargarJuegos() {
                                 </a>
                             </div>
                         </div>`;
-                    gamesList.insertAdjacentHTML('beforeend', cardHtml);
+                    gamesList1.insertAdjacentHTML('beforeend', cardHtml);
                 });
             }
-        });
+       });
 }
-
 // Ejecutar al cargar
 cargarJuegos();
-
-
-
-
     });
