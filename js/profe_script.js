@@ -162,7 +162,7 @@ function cargarJuegos() {
             // Lógica para cerrar sesión (en una aplicación real, implicaría una llamada al backend)
             alert('Has cerrado sesión.');
             isLoggedIn = false;
-            window.location.href = '../index.php'; // CAMBIO AQUÍ: Redirige a index.html
+            window.location.href = '../index_juego.php'; // CAMBIO AQUÍ: Redirige a index.html
         } else {
             // Lógica para iniciar sesión (solo abre el modal por ahora)
             loginModal.show();

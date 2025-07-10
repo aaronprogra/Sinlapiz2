@@ -11,31 +11,33 @@
     <!-- Enlace a la fuente Lobster de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <!-- Estilos personalizados para colores y diseño -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/juegos_styles.css">
 </head>
 <body>
 
     <!-- Barra de Navegación Superior con título destacado y botón de inicio de sesión -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom shadow-sm">
-        <div class="container-fluid d-flex justify-content-center position-relative">
-            <!-- Título de la página centralizado, sin mx-auto aquí ya que el padre lo centrará -->
-            <a class="navbar-brand text-white fw-bold display-5 animated-title" href="#">
-                APRENDIENDO SIN LÁPIZ NI PAPEL
-            </a>
-            <!-- Botón para iniciar sesión posicionado absolutamente en la esquina superior derecha -->
-            <div class="position-absolute end-0 top-50 translate-middle-y me-3">
-                <button class="btn btn-warning text-dark fw-bold rounded-pill px-4 py-2" id="iniciarSesionBtn">
-                    <i class="fas fa-user-circle me-2"></i> Iniciar Sesión
-                </button>
-            </div>
-        </div>
-    </nav>
+    <!-- Barra de Navegación Superior -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom shadow-sm">
+  <div class="container-fluid d-flex flex-column flex-lg-row align-items-center justify-content-between">
+    
+    <!-- Título -->
+    <a class="navbar-brand text-white fw-bold display-5 animated-title text-center mb-2 mb-lg-0" href="#">
+      Aprendiendo sin lápiz ni papel
+    </a>
+
+    <!-- Botón Iniciar Sesión -->
+    <button class="btn btn-warning text-dark fw-bold rounded-pill px-4 py-2" id="iniciarSesionBtn">
+      <i class="fas fa-user-circle me-2"></i> Iniciar Sesión
+    </button>
+
+  </div>
+</nav>
 
     <!-- Contenido Principal de la página -->
     <div class="container mt-5">
         <!-- Título del colegio -->
         <h2 class="text-center text-info-custom mb-5 school-title">
-            Creado por "Colegio Carlos Condell de La Haza, La Serena"
+            "Colegio Carlos Condell de La Haza, La Serena"
         </h2>
 
         <!-- Sección de módulos de grado -->
@@ -141,6 +143,6 @@
     <!-- Enlace a Bootstrap JavaScript (Bundle con Popper) para funcionalidades interactivas -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Enlace a JavaScript personalizado para el comportamiento de la página -->
-    <script src="js/script.js"></script>
+    <script src="js/condell_script.js"></script>
 </body>
 </html>

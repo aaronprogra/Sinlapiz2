@@ -11,7 +11,7 @@
     <!-- Enlace a la fuente Lobster de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <!-- Estilos personalizados para colores y diseño (usa el mismo styles.css) -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/juegos_styles.css">
     <!-- Los estilos específicos de esta página se han movido a styles.css -->
 </head>
 <body>
@@ -25,61 +25,19 @@
 
         <div class="row justify-content-center g-4">
             <!-- Ejemplo de Juego 1: Análisis de Textos (Idea Principal, Detalles) -->
-            <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
-                <div class="card game-card flex-fill">
-                    <a href="https://wordwall.net/es-cl/community/analisis-textos-4-basico" target="_blank" rel="noopener noreferrer">
-                        <img src="https://placehold.co/400x180/FF6347/FFFFFF?text=Analiza+Textos" class="card-img-top" alt="Imagen de Juego de Análisis de Textos">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Analizando Textos Completos</h5>
-                            <p class="card-text text-muted">Encuentra la idea principal y los detalles.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Ejemplo de Juego 2: Uso de Puntos y Comas -->
-            <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
-                <div class="card game-card flex-fill">
-                    <a href="https://wordwall.net/es-cl/community/puntos-comas-4-basico" target="_blank" rel="noopener noreferrer">
-                        <img src="https://placehold.co/400x180/1E90FF/FFFFFF?text=Puntuación" class="card-img-top" alt="Imagen de Juego de Puntos y Comas">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Puntos y Comas</h5>
-                            <p class="card-text text-muted">¡Aprende a puntuar correctamente!</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Ejemplo de Juego 3: Poesía y Rimas -->
-            <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
-                <div class="card game-card flex-fill">
-                    <a href="https://wordwall.net/es-cl/community/poesia-rimas-4-basico" target="_blank" rel="noopener noreferrer">
-                        <img src="https://placehold.co/400x180/32CD32/FFFFFF?text=Poesía+y+Rimas" class="card-img-top" alt="Imagen de Juego de Poesía y Rimas">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">El Mundo de la Poesía y las Rimas</h5>
-                            <p class="card-text text-muted">Crea versos y encuentra palabras que riman.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Ejemplo de Juego 4: Creación de Cuentos y Narraciones -->
-            <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
-                <div class="card game-card flex-fill">
-                    <a href="https://wordwall.net/es-cl/community/creacion-cuentos-4-basico" target="_blank" rel="noopener noreferrer">
-                        <img src="https://placehold.co/400x180/FFD700/000000?text=Escribe+Cuentos" class="card-img-top" alt="Imagen de Juego de Creación de Cuentos">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Inventa tus Propios Cuentos</h5>
-                            <p class="card-text text-muted">¡Desarrolla tu creatividad escribiendo historias!</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+           <div class="row justify-content-center g-4">
+            <!-- Ejemplo de Juego 1: Reconocimiento de Vocales -->
+                   <!-- Sección para mostrar los juegos agregados dinámicamente -->
+        <h3 class="text-center text-info-custom mb-4">Juegos Agregados</h3>
+        <div class="row justify-content-center" id="gamesList8">
+            <!-- Los juegos agregados se insertarán aquí por JavaScript -->
+            <p class="text-center text-muted" id="noGamesMessage">No hay juegos agregados aún. ¡Usa el formulario de arriba!</p>
+        </div>
 
             <!-- Puedes añadir más juegos aquí siguiendo el mismo formato -->
 
         </div>
-
+<script src="../js/juegos_script.js"></script>
 <?php include 'back.php' ?>
 <?php include 'modalSesion.php';  ?>
 </body>

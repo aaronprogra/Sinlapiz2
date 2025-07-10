@@ -11,7 +11,7 @@
     <!-- Enlace a la fuente Lobster de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <!-- Estilos personalizados para colores y diseño (usa el mismo styles.css) -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/juegos_styles.css">
     <!-- Los estilos específicos de esta página se han movido a styles.css -->
 </head>
 <body>
@@ -24,61 +24,17 @@
 
         <div class="row justify-content-center g-4">
             <!-- Ejemplo de Juego 1: Reconocimiento de Vocales -->
-            <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
-                <div class="card game-card flex-fill">
-                    <a href="https://wordwall.net/es-cl/community/reconocimiento-vocales-1-basico" target="_blank" rel="noopener noreferrer">
-                        <img src="https://placehold.co/400x180/FF6347/FFFFFF?text=Vocales" class="card-img-top" alt="Imagen de Juego de Vocales">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">¡Descubre las Vocales!</h5>
-                            <p class="card-text text-muted">Aprende y practica las 5 vocales.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Ejemplo de Juego 2: Formación de Sílabas -->
-            <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
-                <div class="card game-card flex-fill">
-                    <a href="https://wordwall.net/es-cl/community/formacion-silabas-1-basico" target="_blank" rel="noopener noreferrer">
-                        <img src="https://placehold.co/400x180/1E90FF/FFFFFF?text=Forma+Sílabas" class="card-img-top" alt="Imagen de Juego de Sílabas">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Arma Palabras con Sílabas</h5>
-                            <p class="card-text text-muted">Combina letras y forma sílabas.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Ejemplo de Juego 3: Reconocimiento de Letras Mayúsculas y Minúsculas -->
-            <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
-                <div class="card game-card flex-fill">
-                    <a href="https://wordwall.net/es-cl/community/letras-mayusculas-minusculas-1-basico" target="_blank" rel="noopener noreferrer">
-                        <img src="https://placehold.co/400x180/32CD32/FFFFFF?text=Mayúsculas+y+Minúsculas" class="card-img-top" alt="Imagen de Juego de Mayúsculas y Minúsculas">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Mayúsculas y Minúsculas</h5>
-                            <p class="card-text text-muted">¡Distingue entre ellas!</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Ejemplo de Juego 4: Lectura de Palabras Cortas -->
-            <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
-                <div class="card game-card flex-fill">
-                    <a href="https://wordwall.net/es-cl/community/lectura-palabras-cortas-1-basico" target="_blank" rel="noopener noreferrer">
-                        <img src="https://placehold.co/400x180/FFD700/000000?text=Lee+Palabras" class="card-img-top" alt="Imagen de Juego de Lectura">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Lee tus Primeras Palabras</h5>
-                            <p class="card-text text-muted">Aprende a leer de forma divertida.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+                   <!-- Sección para mostrar los juegos agregados dinámicamente -->
+        <h3 class="text-center text-info-custom mb-4">Juegos Agregados</h3>
+        <div class="row justify-content-center" id="gamesList5">
+            <!-- Los juegos agregados se insertarán aquí por JavaScript -->
+            <p class="text-center text-muted" id="noGamesMessage">No hay juegos agregados aún. ¡Usa el formulario de arriba!</p>
+        </div>
 
             <!-- Puedes añadir más juegos aquí siguiendo el mismo formato -->
 
         </div>
-
+<script src="../js/juegos_script.js"></script>
    <?php include 'back.php' ?>
    <?php include 'modalSesion.php' ?>
 </body>

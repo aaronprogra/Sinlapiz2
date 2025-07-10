@@ -6,20 +6,20 @@ $modelo = new JuegoModel();
 $accion = $_POST['accion'] ?? $_GET['accion'] ?? '';
 
 switch ($accion) {
-    case 'buscar1m':
-        $juegos = $modelo->obtener1M();
+    case 'buscar1l':
+        $juegos = $modelo->obtener1L();
         echo json_encode($juegos);
         break;
-    case 'buscar2m':
-        $juegos = $modelo->obtener2M();
+    case 'buscar2l':
+        $juegos = $modelo->obtener2L();
         echo json_encode($juegos);
         break;
-    case 'buscar3m':
-        $juegos = $modelo->obtener3M();
+    case 'buscar3l':
+        $juegos = $modelo->obtener3L();
         echo json_encode($juegos);
         break;
-    case 'buscar4m':
-        $juegos = $modelo->obtener4M();
+    case 'buscar4l':
+        $juegos = $modelo->obtener4L();
         echo json_encode($juegos);
         break;         
 

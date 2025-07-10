@@ -11,7 +11,7 @@
     <!-- Enlace a la fuente Lobster de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <!-- Estilos personalizados para colores y diseño -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/juegos_styles.css">
     <!-- Nota: Los estilos específicos de esta página han sido movidos a styles.css -->
 </head>
 <body>

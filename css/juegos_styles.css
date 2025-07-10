@@ -72,9 +72,9 @@ body {
 /* Estilos para el título principal "Aprendiendo sin Lápiz ni Papel" */
 .animated-title {
     font-family: 'Lobster', cursive; /* Fuente Lobster */
-    font-size: 3.5rem;
-    letter-spacing: 2px;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    font-size: 5rem;
+    letter-spacing: 4px;
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
     animation: fadeInScale 1.5s ease-out; /* Animación de aparición y escala */
     transform: translateX(20px); /* Desplaza 20px a la derecha desde su posición centrada */
     white-space: nowrap; /* Evita que el texto se rompa en varias líneas */

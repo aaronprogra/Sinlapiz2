@@ -29,6 +29,37 @@ class JuegoModel {
         return $result->fetch_all(MYSQLI_ASSOC);
         
     }
+    public function obtener3M(){
+        $result = $this->conexion->query("SELECT * FROM juegos WHERE curso='tercero' AND materia='matematicas' ORDER BY id DESC");
+        return $result->fetch_all(MYSQLI_ASSOC);
+        
+    }
+    public function obtener4M(){
+        $result = $this->conexion->query("SELECT * FROM juegos WHERE curso='cuarto' AND materia='matematicas' ORDER BY id DESC");
+        return $result->fetch_all(MYSQLI_ASSOC);
+        
+    }
+
+    public function obtener1L(){
+        $result = $this->conexion->query("SELECT * FROM juegos WHERE curso='primero' AND materia='lenguaje' ORDER BY id DESC");
+        return $result->fetch_all(MYSQLI_ASSOC);
+        
+    }
+     public function obtener2L(){
+        $result = $this->conexion->query("SELECT * FROM juegos WHERE curso='segundo' AND materia='lenguaje' ORDER BY id DESC");
+        return $result->fetch_all(MYSQLI_ASSOC);
+        
+    }
+    public function obtener3L(){
+        $result = $this->conexion->query("SELECT * FROM juegos WHERE curso='tercero' AND materia='lenguaje' ORDER BY id DESC");
+        return $result->fetch_all(MYSQLI_ASSOC);
+        
+    }
+    public function obtener4L(){
+        $result = $this->conexion->query("SELECT * FROM juegos WHERE curso='cuarto' AND materia='lenguaje' ORDER BY id DESC");
+        return $result->fetch_all(MYSQLI_ASSOC);
+        
+    }
        
         
 }
