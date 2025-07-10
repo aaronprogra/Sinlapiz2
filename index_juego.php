@@ -16,7 +16,7 @@
 <body>
 
     <!-- Barra de Navegación Superior con título destacado y botón de inicio de sesión -->
-    <!-- Barra de Navegación Superior -->
+ <!-- Barra de Navegación Superior -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom shadow-sm">
   <div class="container-fluid d-flex flex-column flex-lg-row align-items-center justify-content-between">
     
